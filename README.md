@@ -45,3 +45,15 @@ func main() {
 ```
 
 ## Set Custom Rand Seed
+
+```go
+package main
+
+import (
+    "github.com/Squwid/go-randomizer"
+)
+
+func main() {
+    randomizer.NewRandSourceFromSource(0) // Extremely effective for testing, randomize will always have same order
+}
+```
