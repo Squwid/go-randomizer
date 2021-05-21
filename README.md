@@ -46,6 +46,8 @@ func main() {
 
 ## Set Custom Rand Seed
 
+Setting a custom seed is effective for testing, since having the same seed will guarantee that randomize functions will have the same randomized order.
+
 ```go
 package main
 
