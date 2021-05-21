@@ -1,4 +1,4 @@
-package randomwords
+package randomizer
 
 // Number returns a random number between and inclusive of min and max
 func Number(min, max int) int {

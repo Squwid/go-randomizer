@@ -1,7 +1,8 @@
-package randomwords
+package randomizer
 
 import (
 	"fmt"
+	"strings"
 	"testing"
 	"time"
 )
@@ -28,4 +29,9 @@ func TestRandomDate(t *testing.T) {
 	for i := 0; i < 10; i++ {
 		fmt.Println(Date(begin, end).String())
 	}
+}
+
+func TestRandomTitle(t *testing.T) {
+	title := strings.Title(strings.Join(Words(Number(5, 10)), " "))
+	fmt.Println(title)
 }

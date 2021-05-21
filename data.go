@@ -1,5 +1,5 @@
-// Package randomwords implements an extremely easy way to randomly generate different types of words
-package randomwords
+// package randomizer implements an extremely easy way to randomly generate words, numbers, or time without having to worry about random seeds
+package randomizer
 
 import (
 	"encoding/json"

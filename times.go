@@ -1,4 +1,4 @@
-package randomwords
+package randomizer
 
 import (
 	"math/rand"

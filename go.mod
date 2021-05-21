@@ -1,3 +1,3 @@
-module github.com/Squwid/go-randomwords
+module github.com/Squwid/go-randomizer
 
 go 1.16

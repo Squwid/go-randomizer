@@ -1,4 +1,4 @@
-package randomwords
+package randomizer
 
 import (
 	"math/rand"
@@ -10,7 +10,7 @@ var rwRand *rand.Rand
 var randSourceLock = &sync.RWMutex{}
 
 func init() {
-	setRandSource(time.Now().Unix())
+	NewRandSource()
 }
 
 // NewRandSourceFromSource uses a user provided source to set the random source

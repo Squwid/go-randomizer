@@ -1,4 +1,4 @@
-package randomwords
+package randomizer
 
 // word options
 const (
