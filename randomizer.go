@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-var randSource rand.Source
+var rwRand *rand.Rand
 var randSourceLock = &sync.RWMutex{}
 
 func init() {
@@ -20,19 +20,19 @@ func NewRandSourceFromSource(source int64) {
 
 // NewRandSource creates a new random source using the current time as the seed
 func NewRandSource() {
-	setRandSource(time.Now().Unix())
+	setRandSource(time.Now().UnixNano())
 }
 
 func setRandSource(source int64) {
 	randSourceLock.Lock()
 	defer randSourceLock.Unlock()
 
-	randSource = rand.NewSource(source)
+	rwRand = rand.New(rand.NewSource(source))
 }
 
-func getRandSource() rand.Source {
+func getRandSource() *rand.Rand {
 	randSourceLock.RLock()
 	defer randSourceLock.RUnlock()
 
-	return randSource
+	return rwRand
 }

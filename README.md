@@ -30,6 +30,13 @@ func main() {
     // ex. Pretty Eagle
     titleCase := strings.Title(fmt.Sprintf("%s %s", randomwords.Adjective(), randomwords.Noun()))
     fmt.Println(titleCase)
+
+    // Print a random time in 2020
+    // ex. 2020-06-22 13:34:06 -0400 EDT
+    begin := time.Date(2020, 1, 0, 0, 0, 0, 0, time.UTC)
+	end := time.Date(2021, 1, 0, 0, 0, 0, 0, time.UTC)
+    date := randomwords.Date(begin, end)
+    fmt.Println(date.String())
 }
 ```
 

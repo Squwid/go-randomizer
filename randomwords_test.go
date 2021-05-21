@@ -2,15 +2,30 @@ package randomwords
 
 import (
 	"fmt"
-	"strings"
 	"testing"
 	"time"
 )
 
+func TestRandomSource(t *testing.T) {
+	NewRandSourceFromSource(0)
+
+	for i := 0; i < 100; i++ {
+		fmt.Printf("%s %s\n", Noun(), Adjective())
+	}
+}
+
 func TestRandomWords(t *testing.T) {
-	fmt.Println("*** Printing Nouns ***")
-	for i := 0; i < 1000; i++ {
-		time.Sleep(500 * time.Millisecond)
-		fmt.Printf(strings.Title(fmt.Sprintf("%s %s\n", RandomAdjective(), RandomNoun())))
+	// NewRandSourceFromSource(0)
+
+	for i := 0; i < 100; i++ {
+		fmt.Printf("%s\n", Word())
+	}
+}
+
+func TestRandomDate(t *testing.T) {
+	begin := time.Date(2020, 1, 0, 0, 0, 0, 0, time.UTC)
+	end := time.Date(2021, 1, 0, 0, 0, 0, 0, time.UTC)
+	for i := 0; i < 10; i++ {
+		fmt.Println(Date(begin, end).String())
 	}
 }
