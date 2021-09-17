@@ -1,6 +1,6 @@
 # go-randomizer
 
-[![GoDoc][1][2]] [![Release][3][4]] [![Go Report Card][5][6]] [![Coverage][7][8]]
+[![GoDoc][1]][2] [![Release][3]][4] [![Go Report Card][5]][6] [![Coverage][7]][8]
 
 [1]: https://godoc.org/github.com/Squwid/go-randomizer?status.svg
 [2]: https://godoc.org/github.com/Squwid/go-randomizer
