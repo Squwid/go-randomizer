@@ -9,6 +9,8 @@ import (
 var rwRand *rand.Rand
 var randSourceLock = &sync.RWMutex{}
 
+var randLock = &sync.Mutex{}
+
 func init() {
 	NewRandSource()
 }

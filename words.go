@@ -20,7 +20,13 @@ func Adjective() string {
 func Word() string {
 	const options = 2 // # of enum options
 
-	switch getRandSource().Intn(options) {
+	s := getRandSource()
+
+	randLock.Lock()
+	n := s.Intn(options)
+	randLock.Unlock()
+
+	switch n {
 	case adjective:
 		return Adjective()
 	default:
@@ -49,5 +55,11 @@ func randomize(l ...string) string {
 		return l[0]
 	}
 
-	return l[getRandSource().Intn(len(l)-1)]
+	s := getRandSource()
+
+	randLock.Lock()
+	n := s.Intn(len(l) - 1)
+	randLock.Unlock()
+
+	return l[n]
 }
