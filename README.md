@@ -1,6 +1,19 @@
 # go-randomizer
 
-Randomizer is a library that randomizes different types of words, such as Adjectives and Nouns, or just Words. Also can pick a time between a start and end date.
+[![GoDoc][1][2]] [![Release][3][4]] [![Go Report Card][5][6]] [![Coverage][7][8]]
+
+[1]: https://godoc.org/github.com/Squwid/go-randomizer?status.svg
+[2]: https://godoc.org/github.com/Squwid/go-randomizer
+[3]: https://img.shields.io/github/v/release/Squwid/go-randomizer.svg
+[4]: https://github.com/Squwid/go-randomizer/releases/latest
+[5]: https://goreportcard.com/badge/github.com/Squwid/go-randomizer
+[6]: https://goreportcard.com/report/github.com/Squwid/go-randomizer
+[7]: coverage.png
+[8]: https://github.com/Squwid/go-randomizer
+
+
+
+Randomizer is a library that randomizes different types of words, such as Adjectives and Nouns, or just Words and handles all of Go's randomizing concurrency for you. Also can pick a time between a start and end date.
 
 ## Installation
 
